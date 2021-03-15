@@ -3,6 +3,7 @@
 import re
 from collections import Counter
 
+#method to return top 10 IP addresses requesting a webserver
 def FindTop10IpAddr(WebServerLogsFile):
 
     cnt = Counter()
@@ -16,9 +17,11 @@ def FindTop10IpAddr(WebServerLogsFile):
                ip = m.groupdict()['ip']
                cnt[ip] += 1
 
+    #finding most common ip address using most_common function
     most_freq_ipaddr = cnt.most_common(10)
     return( most_freq_ipaddr )
 
+#main method
 def main():
     inputFile = 'access.log'
     Top10IpAddr = FindTop10IpAddr(inputFile)

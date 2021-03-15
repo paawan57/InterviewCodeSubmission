@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+#Function to convert 2 lists to Dictionary
 def ConvertListsToDict(keys, values):
     if (len(keys) == 0):
         return ("Empty keys")
@@ -15,7 +16,7 @@ def ConvertListsToDict(keys, values):
         dictionary = dict(zip(keys, values))
         return (dictionary)
 
-
+#main program
 def main():
     list1 = ['a', 'b', 'c']
     list2 = [1, 5, 3, 4]

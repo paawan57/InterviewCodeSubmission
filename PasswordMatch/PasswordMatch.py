@@ -3,7 +3,7 @@
 import re
 import time
 
-
+#Method to validate password using Regular Expressions
 def matchPasswordWithRE(password):
     if (len(password) >= 1 and len(password) <= 20):
 
@@ -17,7 +17,7 @@ def matchPasswordWithRE(password):
     else:
         return ("Invalid")
 
-
+#Method to validate password without using Regular Expressions
 def matchPasswordWithoutRE(password):
     if (len(password) >= 1 and len(password) <= 20):
         if (password[0].isalpha()):
@@ -33,7 +33,7 @@ def matchPasswordWithoutRE(password):
     else:
         return ("Invalid")
 
-
+#main method
 def main():
     password = 'a6-.6ak-er---12'
 
